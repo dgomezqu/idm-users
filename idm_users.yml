@@ -1,14 +1,14 @@
 ---
-- name: Add Users to the IDM
-  become: true
-  gather_facts: false
+ - name: Add Users to the IDM
+   become: true
+   gather_facts: false
 
-  tasks:
-  - name: Load Users users_present.json
-    include_vars:
-      file: users_present.json
+   tasks:
+   - name: Load Users users_present.json
+     include_vars:
+       file: users_present.json
 
-  - name: Create Users
-    ipauser:
-      ipaadmin_password: Test123!
-      users: "{{ users }}"
+   - name: Create Users
+     ipauser:
+       ipaadmin_password: Test123!
+       users: "{{ users }}"
