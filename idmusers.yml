@@ -1,6 +1,6 @@
-- name: Add Users to the IDM
+---
+- name: Add Users to the IDM Massive
   hosts: all
-  gather_facts: false
 
   tasks:
   - name: Load Users users_present.json
