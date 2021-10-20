@@ -11,7 +11,10 @@
     ipa_user:
       name: "{{ item.name }}"
       givenname: "{{ item.givenname }}"
+      sn: Acme
+      password: zounds
       state: present
+      update_password: on_create
       ipa_host: idm.lab.example.net
       ipa_user: admin
       ipa_pass: topsecret
