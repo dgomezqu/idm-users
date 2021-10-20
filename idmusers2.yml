@@ -1,0 +1,15 @@
+---
+- name: Add Users to the IDM Massive
+  hosts: all
+  collections:
+    - freeipa.ansible_freeipa
+
+  tasks:
+  - name: Load Users users_present.json
+    include_vars:
+      file: users_present.json
+
+  - name: Create Users
+    community.general.ipa_user:
+      ipaadmin_password: Test123!
+      users: "{{ users }}"
