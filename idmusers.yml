@@ -1,8 +1,6 @@
 ---
 - name: Add Users to the IDM Massive
   hosts: all
-  collections:
-    - freeipa.ansible_freeipa
 
   tasks:
   - name: Load Users users_present.json
@@ -11,7 +9,8 @@
 
   - name: Create Users
     ipa_user:
-      users: "{{ users }}"
+      name: "{{ users }}"
+      state: present
       ipa_host: idm.lab.example.ne
       ipa_user: admin
       ipa_pass: topsecret
