@@ -3,15 +3,11 @@
   hosts: all
 
   tasks:
-  - name: Load Users users_present.json
-    include_vars:
-      file: users_present.json
-
-  - name: Create Users
+  - name: Create Users Massive
     ipa_user:
       name: "{{ item.name }}"
       givenname: "{{ item.givenname }}"
-      sn: Acme
+      sn: "{{ item.sn }}"
       password: zounds
       state: present
       update_password: on_create
@@ -19,7 +15,7 @@
       ipa_user: admin
       ipa_pass: topsecret
     with_items:
-      - { name: david, givenname: David }
-      - { name: mauricio, givenname: Mauricio}
-      - { name: juan, givenname: Juan}
+      - { name: david, givenname: David, sn: Goz }
+      - { name: mauricio, givenname: Mauricio, sn: Pal }
+      - { name: juan, givenname: Juan, sn: Nar }
 
