@@ -2,18 +2,12 @@
   "users": [
     {
       "name": "mauricio",
-      "first": "Mauricio",
-      "last": "Pal"
     },
     {
       "name": "david",
-      "first": "David",
-      "last": "Gom"
     },
     {
       "name": "juan",
-      "first": "Juan",
-      "last": "Nar"
     },
   ]
 }
