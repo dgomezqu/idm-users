@@ -1,6 +1,8 @@
 ---
 - name: Add Users to the IDM Massive
   hosts: all
+  collections:
+    - freeipa.ansible_freeipa
 
   tasks:
   - name: Load Users users_present.json
