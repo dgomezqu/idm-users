@@ -9,7 +9,7 @@
 
   - name: Create Users
     ipa_user:
-      name: "{{ item }}"
+      name: "{{ users }}"
       state: present
       ipa_host: idm.lab.example.net
       ipa_user: admin
