@@ -2,12 +2,15 @@
   "users": [
     {
       "name": "mauricio",
+      "givenname: "Mauricio",
     },
     {
       "name": "david",
+      "givenname: "David",
     },
     {
       "name": "juan",
+      "givenname: "Juan",
     },
   ]
 }
