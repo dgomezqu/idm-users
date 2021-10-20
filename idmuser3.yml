@@ -1,0 +1,10 @@
+---
+- name: Add Users to the IDM Massive
+  hosts: all
+
+  tasks:
+
+  - name: Create Users
+    community.general.ipa_user:
+      ipaadmin_password: Test123!
+      users: "{{ users }}"
