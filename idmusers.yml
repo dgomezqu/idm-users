@@ -11,5 +11,7 @@
 
   - name: Create Users
     ipa_user:
-      ipaadmin_password: Test123!
       users: "{{ users }}"
+      ipa_host: idm.lab.example.ne
+      ipa_user: admin
+      ipa_pass: topsecret
