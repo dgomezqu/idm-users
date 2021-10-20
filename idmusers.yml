@@ -10,6 +10,6 @@
       file: users_present.json
 
   - name: Create Users
-    ipauser:
+    ipa_user:
       ipaadmin_password: Test123!
       users: "{{ users }}"
