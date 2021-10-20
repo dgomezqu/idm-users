@@ -11,7 +11,7 @@
     ipa_user:
       name: "{{ item }}"
       state: present
-      ipa_host: idm.lab.example.ne
+      ipa_host: idm.lab.example.net
       ipa_user: admin
       ipa_pass: topsecret
     with_items:
