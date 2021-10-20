@@ -9,8 +9,12 @@
 
   - name: Create Users
     ipa_user:
-      name: "{{ users }}"
+      name: "{{ item }}"
       state: present
       ipa_host: idm.lab.example.ne
       ipa_user: admin
       ipa_pass: topsecret
+    with_items:
+      - david
+      - mauricio
+      - juan
